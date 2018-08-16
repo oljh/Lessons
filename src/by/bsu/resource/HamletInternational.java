@@ -19,11 +19,11 @@ public class HamletInternational {
 			String country = "";
 			String language = "";
 			switch (in) {
-			case '1':
+			case 1:
 				country = "US";
 				language = "EN";		
 				break;
-			case '2':
+			case 2:
 				country = "BY";
 				language = "BE";
 				break;
