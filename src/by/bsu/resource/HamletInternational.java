@@ -21,11 +21,11 @@ public class HamletInternational {
 			switch (in) {
 			case 1:
 				country = "US";
-				language = "EN";		
+				language = "en";		
 				break;
 			case 2:
 				country = "BY";
-				language = "BE";
+				language = "be";
 				break;
 			}
 
