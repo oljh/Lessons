@@ -30,7 +30,7 @@ public class HamletInternational {
 			}
 
 		Locale current = new Locale(language, country);
-		ResourceBundle rb = ResourceBundle.getBundle("property.text", current);
+		ResourceBundle rb = ResourceBundle.getBundle("\\property.text", current);
 		String s1 = rb.getString("str1");
 		System.out.println(s1);
 		
