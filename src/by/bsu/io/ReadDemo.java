@@ -19,7 +19,7 @@ public class ReadDemo {
 		System.out.println("\n число байт" + count);
 		}catch (IOException e) {
 			System.err.println("Ошибка файла"+e);
-		}finally {
+		}finally {	
 			try {
 				if(is != null) {
 					is.close();
