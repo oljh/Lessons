@@ -9,7 +9,7 @@ public class Student implements Serializable{
 	private transient String password;
 	private static final long serialVersionUID = 1L;
 	/* смысл поля serialVersionUID для класса будет объяснен ниже*/
-		public Student (String nameOfFaculty, String name, String password) {
+		public Student (String nameOfFaculty, String name,int id, String password) {
 			faculty = nameOfFaculty;
 			this.name = name;
 			this.id = id;

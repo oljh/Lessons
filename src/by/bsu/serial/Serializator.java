@@ -5,6 +5,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InvalidClassException;
 import java.io.InvalidObjectException;
 import java.io.NotSerializableException;
 import java.io.ObjectInputStream;
@@ -48,10 +49,23 @@ public class Serializator {
 			Student st = (Student) istream.readObject();
 			return st;
 		} catch (ClassNotFoundException ce) {
-
-		} catch (IOException e) {
-			e.printStackTrace();
+			System.err.println("Класс не существует"+ce);
+		}catch(FileNotFoundException e) { 
+			System.err.println("Файл для сериализации не найден"+ e);		
+		}catch (InvalidClassException e) {
+			System.err.println("Несовпадение версий классов"+ e);
+		}catch (IOException ioe) {
+			System.err.println("Общая I/O ошибка"+ ioe);
+		}finally {
+			try {
+				if (istream != null) {
+					istream.close();
+				}
+			}catch (IOException e) {
+				System.err.println("ошибка закрытия потока" + e);
+			}
 		}
-		return null;
+		
+		throw new InvalidObjectException("объект не восстановлен");
 	}
 }
