@@ -45,7 +45,7 @@ public class PackJar {
 					}
 					jos.closeEntry();
 				} catch (FileNotFoundException e) {
-
+					System.err.println(e + "Файл не найден");
 				}
 
 			}
