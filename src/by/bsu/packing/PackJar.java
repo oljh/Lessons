@@ -1,4 +1,4 @@
-package by.bsu.reading;
+package by.bsu.packing;
 
 import java.io.File;
 import java.io.FileInputStream;
