@@ -17,13 +17,17 @@ public class UncheckCheckRun {
 			Order or3 = (Order) raw.get(2);
 			for (Object ob : raw) {
 				System.out.println("raw " + ob);
-			
+			}
+
 			ArrayList<Order> orders = new ArrayList<Order>() {
 				{
 					add(new Order(231, 12.f));
+					add(new Order(231, 2.9f));
+					add(new Order(217, 1.7f));
+					//add(new Order(23154, 120.f, "Xerox"));
 				}
 			};	
 			
 		};
 	}
-}
+
