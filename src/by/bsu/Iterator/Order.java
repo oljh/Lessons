@@ -1,5 +1,6 @@
 package by.bsu.Iterator;
 
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
@@ -18,13 +19,26 @@ public class Order implements Iterable<Item>{
 		return orderId;
 	}
 
-	public List<Item> getListItem(){
-	
+	public List<Item> getListItems(){
+	return Collections.unmodifiableList(listItems);
 	}
+	
+	//некоторые делегированные методы интерфейсов List и Collection
+	
+	public boolean add(Item e) {
+		return listItems.add(e);
+	}
+	
+	public Item get(int index) {
+		return listItems.get(index);
+	}
+	
+	public Item remove(int index) {
+		return listItems.remove(index);
+}
 	@Override
 	public Iterator<Item> iterator() {
-		// TODO Auto-generated method stub
-		return null;
+		return listItems.iterator();
 	}
 	
 }
