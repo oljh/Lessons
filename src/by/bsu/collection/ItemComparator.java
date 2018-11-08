@@ -28,11 +28,13 @@ public class ItemComparator implements Comparator<Item> {
 		case ITEM_ID:
 			return one.getItemId() - two.getItemId();
 		case PRICE:
-			return Double.compare(two.getPrice() - one.getPrice());
-		case NAME
+			return Double.compare(two.getPrice() - one.getPrice(), 0);
+		case NAME:
+			return one.getName().compareTo(two.getName());
+			default:
+				throw new EnumConstantNotPresentException(ItemEnum.class, sortingIndex.name());
 			
 		}
-		return 0;
 	}
 	
 }
