@@ -25,7 +25,7 @@ public class OrderQueueAction {
 		//заменить while --> do{} while
 		 while ((ob = queue.poll()) != null) 
 			 {
-			System.out.println("Order # "+ ob.getOrderId()+"");
+			System.out.println("Order # "+ ob.getOrderId()+"is processing");
 		}
 	}
 }
