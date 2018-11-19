@@ -16,7 +16,7 @@ public class DemoTreeSet {
 		System.out.println(list +"множество");
 		System.out.println(set.comparator());
 		//Извлечение наибольшего и наименьшего значения
-		System.out.println(set.last()+""+set.first());
+		System.out.println(set.last()+"  "+set.first());
 		HashSet<String> hSet = new HashSet<>(set);
 		for(String str : hSet) {
 			System.out.println(str + "  " + str.hashCode());

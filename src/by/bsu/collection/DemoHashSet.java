@@ -10,7 +10,7 @@ import java.util.TreeSet;
 public class DemoHashSet {
 	public static void main(String[] args) {
 		HashSet<String> words = new HashSet<>(100);
-		long callTime = System.nanoTime();
+		long callTime = System.currentTimeMillis();
 		Scanner scan = null;
 		try {
 			scan = new Scanner(new File("text\\nabokov.txt"));
@@ -28,7 +28,7 @@ public class DemoHashSet {
 		}
 		TreeSet<String> ts = new TreeSet<>(words);
 		System.out.println(ts);
-		long totalTime = System.nanoTime() - callTime;
-		System.out.println("различных слов:"+ words.size()+", " + totalTime + " наносекунд");
+		long totalTime = System.currentTimeMillis() - callTime;
+		System.out.println("различных слов:"+ words.size()+", " + totalTime + " милисекунд");
 	}
 }
