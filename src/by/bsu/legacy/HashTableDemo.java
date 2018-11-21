@@ -13,14 +13,14 @@ public class HashTableDemo {
 		int key;
 		while (ek.hasMoreElements()) {
 			key = ek.nextElement();
-			System.out.println("");
+			System.out.printf("%4d ", key);
 		}
 		System.out.println("");
 		Enumeration<Double> ev = ht.elements();
 		double value;
 		while (ev.hasMoreElements()) {
 			value = ev.nextElement();
-			System.out.printf("%.2f", value);
+			System.out.printf("%.2f ", value);
 		}
 	}
 }
