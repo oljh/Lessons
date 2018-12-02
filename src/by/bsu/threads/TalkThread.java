@@ -1,0 +1,15 @@
+package by.bsu.threads;
+
+public class TalkThread extends Thread {
+	@Override
+	public void run() {
+		for (int i = 0; i < 1; i++) {
+			System.out.println("Talking");
+			try {
+				Thread.sleep(7); // остановка в миллисекундах
+			}catch (InterruptedException e) {
+				System.out.print(e);
+			}
+		}
+	}
+}
