@@ -14,6 +14,17 @@ public class Market extends Thread {
 	@Override
 	public void run() {
 		Random random = new Random();
-		while(true)
+		while(true) {
+			try {
+				index.addAndGet(random.nextInt(10));
+				Thread.sleep(random.nextInt(500));
+				index.addAndGet(-1*random.nextInt(500));
+				Thread.sleep(random.nextInt(500));
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			
+		}
+		
 	}
 }
