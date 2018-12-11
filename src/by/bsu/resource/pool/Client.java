@@ -13,7 +13,7 @@ public class Client extends Thread {
 	public void run() {
 		AudioChannel channel = null;
 		try {
-			channel = pool.getResource(500); // изменить на 100
+			channel = pool.getResource(100); // изменить на 100
 			reading = true;
 			System.out.println("Channel Client #" + this.getId() + " took channel #" + channel.getChannelId());
 			channel.using();
