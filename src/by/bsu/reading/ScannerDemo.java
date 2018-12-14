@@ -4,7 +4,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.Scanner;
 
-public class ScanerDemo {
+public class ScannerDemo {
 	public static void main(String[] args) {
 		String filename = "text\\scan.txt";
 		Scanner scan = null;
