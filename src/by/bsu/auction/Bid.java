@@ -1,4 +1,4 @@
-package auction;
+package by.bsu.auction;
 
 import java.util.Random;
 import java.util.concurrent.BrokenBarrierException;

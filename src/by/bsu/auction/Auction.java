@@ -1,4 +1,4 @@
-package auction;
+package by.bsu.auction;
 
 import java.util.ArrayList;
 import java.util.Collections;
