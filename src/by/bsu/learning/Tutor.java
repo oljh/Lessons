@@ -1,5 +1,6 @@
 package by.bsu.learning;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -9,6 +10,9 @@ public class Tutor extends Thread{
 	private Integer idTutor;
 	private List<Student> list;
 	public Tutor() {
+		this.list = new ArrayList<>();
+	}
+	public Tutor(List<Student> list) {
 		this.list = list;
 	}
 	public Integer getIdTutor() {

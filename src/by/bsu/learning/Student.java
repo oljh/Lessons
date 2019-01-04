@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.Random;
 import java.util.concurrent.CountDownLatch;
 
-import com.sun.jmx.snmp.tasks.Task;
 
 public class Student extends Thread {
 	private Integer idStudent;
@@ -14,16 +13,16 @@ public class Student extends Thread {
 
 	public Student(Integer idStudent, int numberTasks) {
 		this.idStudent = idStudent;
-		this.countDown = new CountDownLatch(numberTask);
-		this.taskList = new ArrayList<Task>(numberTask);
+		this.countDown = new CountDownLatch(numberTasks);
+		this.taskList = new ArrayList<Task>(numberTasks);
 	}
 
 	public Integer getIdStudent() {
-		return idStudent();
+		return idStudent;
 	}
 
 	public void setIdStudent(Integer idStudent) {
-		this.idStudent() = idStudent;
+		this.idStudent = idStudent;
 	}
 
 	public CountDownLatch getCountDownLatch() {
@@ -31,7 +30,7 @@ public class Student extends Thread {
 	};
 
 	public List<Task> getTaskList() {
-		return taskList();
+		return taskList;
 	}
 
 	public void addTask(Task task) {
