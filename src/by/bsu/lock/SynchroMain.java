@@ -1,4 +1,4 @@
-package by.bsu.learning;
+package by.bsu.lock;
 
 import java.util.concurrent.TimeUnit;
 
