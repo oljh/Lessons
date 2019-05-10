@@ -31,9 +31,9 @@ public class Truck implements Runnable {
         goTruck();
         phaser.arriveAndAwaitAdvance();
 
-        unlockTruck(){
-            phaser.arriveAndAwaitAdvance();
-        }
+        unlockTruck();
+        phaser.arriveAndAwaitAdvance();
+
     }
 
     private void loadTruck(){
@@ -52,7 +52,7 @@ public class Truck implements Runnable {
             }
         }
     }
-    private void unloadTruck(){
+    private void unlockTruck(){
         int size = bodyStorage.size();
         for (int i = 0; i < size; i ++){
             Item g = bodyStorage.poll();
