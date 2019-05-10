@@ -7,7 +7,7 @@ import java.sql.Statement;
 import java.util.Properties;
 
 public class SimpleJDBCRunner {
-    public static void main (String [] args){
+    public static void main (String [] args) throws SQLException {
         String url = "jdbc:mysql://localhost:3306/testphones";
         Properties prop = new Properties();
         prop.put("user", "root");
@@ -18,7 +18,7 @@ public class SimpleJDBCRunner {
         Connection cn = null;
         DriverManager.registerDriver(new com.mysql.jdbc.Driver());
         try{// 1 блок
-            cn = DriverManager.getConection(url, prop);
+            cn = DriverManager.getConnection(url, prop);
             Statement st = null;
 
         }catch(SQLException e){
