@@ -69,7 +69,9 @@ public class Truck implements Runnable {
     private void goTruck(){
         try{
             Thread.sleep(new Random(100).nextInt(500));
-
+            System.out.println("Грузовик " + number + " начал поездку.");
+            Thread.sleep(new Random(100).nextInt(1000));
+            System.out.println("Грузовик " + number + " завершил поездку.");
 
 
 
