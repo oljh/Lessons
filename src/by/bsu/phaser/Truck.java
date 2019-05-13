@@ -79,6 +79,7 @@ public class Truck implements Runnable {
 
 
 
+
         }catch(InterruptedException e){
 
         }
