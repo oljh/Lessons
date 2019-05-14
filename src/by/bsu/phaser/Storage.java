@@ -24,6 +24,7 @@ public class Storage implements Iterable<Item> {
         return storage;
     }
 
+
     public Item getGoods() {
         return goods.poll();
     }

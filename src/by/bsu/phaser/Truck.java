@@ -73,15 +73,8 @@ public class Truck implements Runnable {
             Thread.sleep(new Random(100).nextInt(1000));
             System.out.println("Грузовик " + number + " завершил поездку.");
 
-
-
-
-
-
-
-
         }catch(InterruptedException e){
-
+            e.printStackTrace();
         }
     }
 }
