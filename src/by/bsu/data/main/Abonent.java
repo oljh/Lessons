@@ -5,6 +5,7 @@ public class Abonent extends Entity {
     private String lastname;
     public Abonent(){
     }
+
     public Abonent(int id, int phone, String lastname){
         super(id);
         this.phone = phone;
@@ -28,7 +29,7 @@ public class Abonent extends Entity {
 
 @Override
     public String toString(){
-        return "Abonent [id="+id+", phone="+ phone +", lastname=" + lastname + "]";
+        return "Abonent [id="+getId()+", phone="+ phone +", lastname=" + lastname + "]";
 }
 
 }

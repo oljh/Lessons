@@ -1,11 +1,6 @@
 package by.bsu.data.main;
 
-import com.mysql.cj.protocol.Resultset;
-
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.Properties;
 
@@ -25,7 +20,7 @@ public class SimpleJDBCRunner {
             Statement st = null;
             try {// блок 2
                 st = cn.createStatement();
-                Resultset rs = null;
+                ResultSet rs = null;
                 try {// блок 3
                     rs = st.executeQuery("SELECT * FROM phonebook");
                     ArrayList<Abonent> lst = new ArrayList<>();
